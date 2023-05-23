@@ -1,28 +1,27 @@
-package com.chitsuenchan.recordkeeper.running
+package com.chitsuenchan.recordkeeper.editrecord
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.edit
-import com.chitsuenchan.recordkeeper.databinding.ActivityEditRunningRecordBinding
+import com.chitsuenchan.recordkeeper.databinding.ActivityEditRecordBinding
 
-class EditRunningRecordActivity : AppCompatActivity() {
+class EditRecordActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityEditRunningRecordBinding
-    private val runningPreferences: SharedPreferences by lazy {
-        getSharedPreferences(
-            "running",
-            Context.MODE_PRIVATE
-        )
-    }
-    private val distance: String? by lazy { intent.getStringExtra("Distance") }       // Here we are retrieving the putExtra data from distance using lazy
+    private lateinit var binding: ActivityEditRecordBinding
+
+
+    private val recordPreferences: SharedPreferences by lazy {getSharedPreferences("running", Context.MODE_PRIVATE) }
+    private val record: String? by lazy { intent.getStringExtra("Distance") }       // Here we are retrieving the putExtra data from distance using lazy
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Because we are inflating an activity window and not a fragment we just need to pass in layoutInflater
-        binding = ActivityEditRunningRecordBinding.inflate(layoutInflater)
+        binding = ActivityEditRecordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupUi()
@@ -53,7 +52,7 @@ class EditRunningRecordActivity : AppCompatActivity() {
     }
 
     private fun setupUi() {
-        title = "$distance Record"
+        title = "$record Record"
         binding.buttonSave.setOnClickListener {
             saveRecord()
             finish()        // We add finish here so that after saving the data we exit this fragment
@@ -68,8 +67,8 @@ class EditRunningRecordActivity : AppCompatActivity() {
         val runningPreferences = getSharedPreferences("running", Context.MODE_PRIVATE)
 
         // Here are we displaying the record saved in sharedpreferences in the edit boxes
-        binding.editTextRecord.setText(runningPreferences.getString("$distance record", null))
-        binding.editTextDate.setText(runningPreferences.getString("$distance date", null))
+        binding.editTextRecord.setText(runningPreferences.getString("$record record", null))
+        binding.editTextDate.setText(runningPreferences.getString("$record date", null))
     }
 
     private fun saveRecord() {
@@ -80,16 +79,22 @@ class EditRunningRecordActivity : AppCompatActivity() {
 
         // This is how to save data to a new file
         runningPreferences.edit {
-            putString("$distance record", record)   // This is how to make a unique key. We will now have a key name for 5km, 10km, half-marathon and marathon
-            putString("$distance date", date)
+            putString("${this@EditRecordActivity.record} record", record)   // This is how to make a unique key. We will now have a key name for 5km, 10km, half-marathon and marathon
+            putString("${this@EditRecordActivity.record} date", date)
         }
     }
 
     private fun clearRecord() {
-        runningPreferences.edit {
-            remove("$distance record")
-            remove("$distance date")
+        recordPreferences.edit {
+            remove("$record record")
+            remove("$record date")
         }
     }
+
+    data class ScreenData(
+        val record: String,
+        val sharedPreferencesName: String,
+        val recordFieldHint: String
+    )
 
 }
