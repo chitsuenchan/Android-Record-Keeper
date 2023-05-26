@@ -1,25 +1,68 @@
 package com.chitsuenchan.recordkeeper.cycling
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.edit
 import com.chitsuenchan.recordkeeper.databinding.ActivityEditCyclingRecordBinding
 import com.chitsuenchan.recordkeeper.databinding.ActivityEditRunningRecordBinding
 import com.chitsuenchan.recordkeeper.databinding.FragmentRunningBinding
 
 class EditCyclingRecordActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityEditCyclingRecordBinding
+    private lateinit var binding: ActivityEditRunningRecordBinding
+    private val cyclingPreferences: SharedPreferences by lazy {
+        getSharedPreferences("cycling", Context.MODE_PRIVATE)
+    }
+    private val cyclingRecords: String? by lazy {intent.getStringExtra("Cycling")}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Because we are inflating an activity window and not a fragment we just need to pass in layoutInflater
-        binding = ActivityEditCyclingRecordBinding.inflate(layoutInflater)
+        binding = ActivityEditRunningRecordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Here we are retrieving the putExtra data from distance
-        val category = intent.getStringExtra("Category")
+        setupUi()
+        displayRecord()
 
-        title = "$category Record"
     }
+
+    private fun setupUi() {
+        title = "$cyclingRecords Record"
+        binding.buttonSave.setOnClickListener{
+            saveRecord()
+            finish()
+        }
+        binding.buttonDelete.setOnClickListener {
+            clearRecord()
+            finish()
+        }
+    }
+    private fun displayRecord() {
+        val cyclingPreferences = getSharedPreferences("cycling", Context.MODE_PRIVATE)
+
+        binding.editTextRecord.setText(cyclingPreferences.getString("$cyclingRecords record", null))
+        binding.editTextDate.setText(cyclingPreferences.getString("$cyclingRecords date", null))
+        println("$cyclingRecords date")
+    }
+
+    private fun saveRecord() {
+        val record = binding.editTextRecord.text.toString()
+        val date = binding.editTextDate.text.toString()
+        val cyclingPreferences = getSharedPreferences("cycling", Context.MODE_PRIVATE)
+
+        cyclingPreferences.edit {
+            putString("$cyclingRecords record", record)
+            putString("$cyclingRecords date", date)
+        }
+    }
+
+    private fun clearRecord() {
+        cyclingPreferences.edit {
+            remove("$cyclingRecords record")
+            remove("$cyclingRecords date")
+        }
+    }
+
 }
