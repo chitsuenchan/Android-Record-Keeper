@@ -54,7 +54,7 @@ Project is completed.
 
 ### Scrollable list of records
 
-<img src="ExampleScreenshots/record_keeper_example_scrollable_list" height="500">
+<img src="ExampleScreenshots/record_keeper_example_scrollable_list.jpg" height="500">
 
 * User can scroll vertically among all the different records (this will help with users with small screens)
 
