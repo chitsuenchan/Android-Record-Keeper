@@ -48,22 +48,22 @@ Project is completed.
 
 ### Fragmented activity views of Running and Cycling records
 
-<img src="ExampleScreenshots/record_keeper_example_1.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_2.jpg" height="400">
+<img src="ExampleScreenshots/record_keeper_example_1.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_2.jpg" height="500">
 
 * User can view Running and Cycling information in its own fragmented activity view
 
 ### Scrollable list of records
 
-<img src="ExampleScreenshots/record_keeper_scrollable_list" height="500">
+<img src="ExampleScreenshots/record_keeper_example_scrollable_list" height="500">
 
 * User can scroll vertically among all the different records (this will help with users with small screens)
 
 ### Editable records that are saved in phone's memory
 
-<img src="ExampleScreenshots/record_keeper_editable_record_0.jpg" height="500">
-<img src="ExampleScreenshots/record_keeper_editable_record_1.jpg" height="500">
-<img src="ExampleScreenshots/record_keeper_editable_record_2.jpg" height="500">
-<img src="ExampleScreenshots/record_keeper_editable_record_3.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_0.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_1.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_2.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_3.jpg" height="500">
 
 * User can edit any record by clicking on it, updating the form, and clicking 'save'
 * All records are saved to the phone's storage so when the user re-enter the app their previously saved records will still be there
