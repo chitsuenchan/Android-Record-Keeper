@@ -25,8 +25,8 @@ This is a personal learning project aimed to teach me the tools and technology n
     </tr>
     <tr>
       <td>Frameworks</td>
-      <td>Android Native Components</td>
-      <td>Material Design</td>
+      <td>Android Native Components
+          Material Design</td>
     </tr>
   </tbody>
 </table>
@@ -48,7 +48,7 @@ Project is completed.
 
 ### Fragmented activity views of Running and Cycling records
 
-<img src="ExampleScreenshots/record_keeper_example_1.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_2.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_running.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_cycling.jpg" height="500">
 
 * User can view Running and Cycling information in its own fragmented activity view
 
