@@ -11,7 +11,7 @@
 - [Execution](#execution)
 
 ## Introduction <a name="introduction"></a>
-An Android app to log Running and Cycling times. 
+An Android app to log Running and Cycling record times. 
 
 ## Motivation <a name="motivation"></a>
 This is a personal learning project aimed to teach me the tools and technology needed to build a native Android application. As later I would like to deploy an Android application to the Google Play store.
