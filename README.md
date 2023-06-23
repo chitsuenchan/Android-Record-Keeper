@@ -60,10 +60,8 @@ Project is completed.
 
 ### Editable records that are saved in phone's memory
 
-<img src="ExampleScreenshots/record_keeper_example_editable_record_0.jpg" height="500">
-<img src="ExampleScreenshots/record_keeper_example_editable_record_1.jpg" height="500">
-<img src="ExampleScreenshots/record_keeper_example_editable_record_2.jpg" height="500">
-<img src="ExampleScreenshots/record_keeper_example_editable_record_3.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_0.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_editable_record_1.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_2.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_editable_record_3.jpg" height="500">
 
 * User can edit any record by clicking on it, updating the form, and clicking 'save'
 * All records are saved to the phone's storage so when the user re-enter the app their previously saved records will still be there
