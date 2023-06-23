@@ -25,8 +25,7 @@ This is a personal learning project aimed to teach me the tools and technology n
     </tr>
     <tr>
       <td>Frameworks</td>
-      <td>Android Native Components
-          Material Design</td>
+      <td>Android Native Components, Material Design</td>
     </tr>
   </tbody>
 </table>
