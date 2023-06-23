@@ -1,5 +1,5 @@
 # Android Sports Record Keeper App
-<img src="ExampleScreenshots/example-featured.jpg" height="500"><img src="ExampleScreenshots/example-detail.jpg" height="500"><img src="ExampleScreenshots/example-list.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_1.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_2.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_3.jpg" height="500">
 
 **Table of Contents**
 - [Introduction](#introduction)
@@ -35,59 +35,41 @@ This is a personal learning project aimed to teach me the tools and technology n
 Project is completed.
 
 ## Features <a name="features"></a>
-- Bottom navigation bar
+- Navigation bar
 - Fragmented activity views of Running and Cycling records
 - Scrollable list of records
 - Editable records that are saved in the phone's memory
 
 ### Navigation bar
 
-<img src="ExampleScreenshots/example-navigationBar.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_nav_bar.jpg" height="500">
 
 * User can switch between activity views by selecting either one of the icons on the bottom navigation bar
 
-### Featured window - Categories
+### Fragmented activity views of Running and Cycling records
 
-<img src="ExampleScreenshots/example-featured-categories.jpg" height="500"><img src="ExampleScreenshots/example-fearured-categories2.jpg" height="400">
+<img src="ExampleScreenshots/record_keeper_example_1.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_2.jpg" height="500">
 
-* User can see Landmarks grouped together by their category
-* Landmarks are automatically grouped together depending on their underlying json data category field
+* User can view Running and Cycling information in its own fragmented activity view
 
-### Featured window - Horizontal scrollable cards
+### Scrollable list of records
 
-<img src="ExampleScreenshots/example-featured-horizontalScroll-1.jpg" height="500"><img src="ExampleScreenshots/example-featured-horizontalScroll-2.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_scrollable_list.jpg" height="500">
 
-* User can scroll horizontally through each category to view the different landmarks
-* User can also click on each image to take them to a detail view of each landmark
+* User can scroll vertically among all the different records (this will help with users with small screens)
 
-### List window - Favourite Filter
+### Editable records that are saved in phone's memory
 
-<img src="ExampleScreenshots/example-list-Favourites-1.jpg" height="500"><img src="ExampleScreenshots/example-list-Favourites-2.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_0.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_editable_record_1.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_editable_record_2.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_editable_record_3.jpg" height="500">
 
-* User can filter the list of landmarks by showing only their favourites by toggling the favourite button
-
-### Detail window - Landmark information
-
-<img src="ExampleScreenshots/example-detail-landmarkInformation.jpg" height="500">
-
-* User can view detailed information about a particular landmark they selected in the featured or list activity window
-* Information includes title, text location, geographical map, and description
-
-### Detail window - favourite 
-
-<img src="ExampleScreenshots/example-list-FavouriteIcon.jpg" height="500">
-
-* User can toggle on/off if a landmark should be favourited or not
-
-Detail window - Maps
-
-<img src="ExampleScreenshots/example-detail-maps-1.jpg" height="500"><img src="ExampleScreenshots/example-detail-maps-2.jpg" height="500">
-
-* User can interact with the map on the detail activity window to view the surrounding area
+* User can edit any record by clicking on it, updating the form, and clicking 'save'
+* All records are saved to the phone's storage so when the user re-enter the app their previously saved records will still be there
 
 # Installation <a name="installation"></a>
-* Ensure XCode is installed (only available on MacOS)
+* Ensure Android Studio is installed
+* Connect a real android device to the PC (enable debug mode) or set up a mobile emulator
 
 # Execution <a name="execution"></a>
-* Open the Landmarks.xcodeproj file in XCode
-* Once the project is open you can click the play button at the top of the IDE to run the iPhone simulator
+* Open the project file in Android Studio
+* Once the project is open you can click the play button at the top of the IDE to run the Android application
