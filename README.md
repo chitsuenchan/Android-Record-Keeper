@@ -1,5 +1,5 @@
 # Android Sports Record Keeper App
-<img src="ExampleScreenshots/example-featured.jpg" height="500"><img src="ExampleScreenshots/example-detail.jpg" height="500"><img src="ExampleScreenshots/example-list.jpg" height="500">
+<img src="ExampleScreenshots/record_keeper_example_1.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_2.jpg" height="500"><img src="ExampleScreenshots/record_keeper_example_3.jpg" height="500">
 
 **Table of Contents**
 - [Introduction](#introduction)
