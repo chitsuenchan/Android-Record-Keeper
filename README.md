@@ -27,6 +27,16 @@ This is a personal learning project aimed to teach me the tools and technology n
       <td>Frameworks</td>
       <td>Android Native Components, Material Design</td>
     </tr>
+    <tr>
+      <td>Notable Technology Utilized</td>
+      <td>
+          <ul>
+              <li>Fragmented activity views</li>
+              <li>Scrollable list of records</li>
+              <li>Storing data on phone memory</li>            
+          </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 
